@@ -1,0 +1,192 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'react-toastify/dist/ReactToastify.css';
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: #f3f4f6;
+}
+
+.Toastify__toast-container {
+  z-index: 9999;
+}
+
+.Toastify__toast {
+  padding: 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.Toastify__toast--success {
+  background-color: #10b981;
+  color: #ffffff;
+}
+
+.Toastify__toast--error {
+  background-color: #ef4444;
+  color: #ffffff;
+}
+
+.Toastify__toast--info {
+  background-color: #3b82f6;
+  color: #ffffff;
+}
+
+.Toastify__toast--warning {
+  background-color: #f59e0b;
+  color: #ffffff;
+}
+
+.Toastify__progress-bar {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.Toastify__close-button {
+  color: #ffffff;
+  opacity: 0.8;
+}
+
+.Toastify__close-button:hover {
+  opacity: 1;
+}
+
+.task-complete-animation {
+  animation: taskComplete 0.6s ease-out forwards;
+}
+
+@keyframes taskComplete {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0.3;
+  }
+}
+
+.priority-high {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  color: white;
+}
+
+.priority-medium {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: white;
+}
+
+.priority-low {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+}
+
+.category-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.progress-ring {
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+
+.progress-ring-circle {
+  fill: none;
+  stroke-width: 4;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.5s ease-in-out;
+}
+
+.checkbox-animation {
+  transition: all 0.2s ease-in-out;
+}
+
+.checkbox-animation:checked + label {
+  animation: checkboxSuccess 0.3s ease-out;
+}
+
+@keyframes checkboxSuccess {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.geometric-card {
+  transition: all 0.2s ease-out;
+  border-radius: 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.geometric-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.geometric-button {
+  border-radius: 0;
+  transition: all 0.15s ease-out;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.geometric-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.form-input {
+  border-radius: 0;
+  border: 2px solid #e5e7eb;
+  transition: all 0.15s ease-out;
+}
+
+.form-input:focus {
+  border-color: #5b21b6;
+  box-shadow: 0 0 0 3px rgba(91, 33, 182, 0.1);
+}
+
+.filter-button {
+  border-radius: 0;
+  transition: all 0.15s ease-out;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.filter-button.active {
+  background: linear-gradient(135deg, #5b21b6 0%, #7c3aed 100%);
+  color: white;
+}
+
+.filter-button:not(.active) {
+  background-color: #fafafa;
+  color: #6b7280;
+  border: 1px solid #e5e7eb;
+}
+
+.filter-button:not(.active):hover {
+  background-color: #f3f4f6;
+  color: #374151;
+}

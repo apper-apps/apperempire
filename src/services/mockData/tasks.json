@@ -1,0 +1,57 @@
+[
+  {
+    "Id": 1,
+    "title": "Complete project proposal",
+    "description": "Finalize the quarterly project proposal for the marketing team",
+    "dueDate": "2024-01-15",
+    "priority": "high",
+    "categoryId": "1",
+    "completed": false,
+    "createdAt": "2024-01-10T09:00:00Z",
+    "completedAt": null
+  },
+  {
+    "Id": 2,
+    "title": "Review team performance",
+    "description": "Conduct quarterly performance reviews for all team members",
+    "dueDate": "2024-01-20",
+    "priority": "medium",
+    "categoryId": "2",
+    "completed": false,
+    "createdAt": "2024-01-10T10:30:00Z",
+    "completedAt": null
+  },
+  {
+    "Id": 3,
+    "title": "Update website content",
+    "description": "Refresh the about page and add new team member profiles",
+    "dueDate": "2024-01-12",
+    "priority": "low",
+    "categoryId": "3",
+    "completed": true,
+    "createdAt": "2024-01-08T14:15:00Z",
+    "completedAt": "2024-01-11T16:45:00Z"
+  },
+  {
+    "Id": 4,
+    "title": "Prepare presentation slides",
+    "description": "Create slides for the upcoming client presentation",
+    "dueDate": "2024-01-18",
+    "priority": "high",
+    "categoryId": "1",
+    "completed": false,
+    "createdAt": "2024-01-09T11:20:00Z",
+    "completedAt": null
+  },
+  {
+    "Id": 5,
+    "title": "Order office supplies",
+    "description": "Restock paper, pens, and other essential office materials",
+    "dueDate": "2024-01-25",
+    "priority": "low",
+    "categoryId": "4",
+    "completed": false,
+    "createdAt": "2024-01-10T13:45:00Z",
+    "completedAt": null
+  }
+]
