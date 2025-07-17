@@ -21,10 +21,14 @@ const TaskPage = () => {
   };
 
   const handleAddTask = () => {
-    taskFormRef.current?.scrollIntoView({ 
-      behavior: "smooth", 
-      block: "start" 
-    });
+    try {
+      taskFormRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    } catch (e) { 
+      throw e;
+    }
   };
 
   return (
