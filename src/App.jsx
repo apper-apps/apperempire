@@ -3,6 +3,10 @@ import { ToastContainer } from "react-toastify";
 import TaskPage from "@/components/pages/TaskPage";
 
 function App() {
+  let a = 1;
+  if (a == 1) { 
+    
+  }
   return (
     <div className="min-h-screen bg-gray-100">
       <Routes>
