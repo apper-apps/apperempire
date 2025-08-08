@@ -110,11 +110,11 @@ const Header = ({ onAddTask, className }) => {
           )}
         </div>
         
-        <Button
+<Button
           onClick={onAddTask}
           variant="secondary"
           size="lg"
-          className="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-white font-semibold shadow-lg"
+          className="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-white font-semibold shadow-lg rounded-full"
         >
           <ApperIcon name="Plus" size={20} className="mr-2" />
           Add Task
