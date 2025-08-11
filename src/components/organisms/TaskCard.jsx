@@ -1,20 +1,21 @@
-import { useState } from "react";
+import React, { forwardRef, useState } from "react";
 import { motion } from "framer-motion";
 import { format } from "date-fns";
-import Checkbox from "@/components/atoms/Checkbox";
-import Button from "@/components/atoms/Button";
-import PriorityBadge from "@/components/molecules/PriorityBadge";
-import CategoryPill from "@/components/molecules/CategoryPill";
 import ApperIcon from "@/components/ApperIcon";
+import CategoryPill from "@/components/molecules/CategoryPill";
+import PriorityBadge from "@/components/molecules/PriorityBadge";
+import Button from "@/components/atoms/Button";
+import Checkbox from "@/components/atoms/Checkbox";
+import { getDaysUntilDue, isOverdue } from "@/utils/dateUtils";
 import { cn } from "@/utils/cn";
 
-const TaskCard = ({ 
+const TaskCard = forwardRef(({ 
   task, 
   category, 
   onToggleComplete, 
   onDelete, 
   className 
-}) => {
+}, ref) => {
   const [isCompleting, setIsCompleting] = useState(false);
   const [isDeleting, setIsDeleting] = useState(false);
 
@@ -60,7 +61,8 @@ const TaskCard = ({
   };
 
   return (
-    <motion.div
+<motion.div
+      ref={ref}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, scale: 0.95 }}
@@ -139,8 +141,8 @@ const TaskCard = ({
           </div>
         </div>
       </div>
-    </motion.div>
+</motion.div>
   );
-};
+});
 
 export default TaskCard;
