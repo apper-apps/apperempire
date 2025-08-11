@@ -47,12 +47,12 @@ const Header = ({ onAddTask, onToggleSidebar, className }) => {
   const completionPercentage = stats.total > 0 ? (stats.completed / stats.total) * 100 : 0;
 
   return (
-    <motion.header
+<motion.header
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4 }}
       className={cn(
-        "bg-gradient-to-r from-purple-900 via-purple-800 to-purple-700 text-white p-6 shadow-lg",
+        "bg-gradient-to-r from-purple-900 via-purple-800 to-purple-700 text-white p-6 shadow-lg relative z-50",
         className
       )}
     >
