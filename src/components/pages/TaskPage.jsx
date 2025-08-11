@@ -38,12 +38,14 @@ const TaskPage = () => {
   return (
     <div className="flex h-screen bg-gray-50">
       {/* Main Content */}
-      <div className="flex-1 flex flex-col">
-        {/* Header */}
-        <Header 
-          onAddTask={handleAddTask} 
-          className="border-b border-gray-200 bg-white"
-        />
+<div className="flex-1 flex flex-col">
+        <>
+          {/* Header */}
+          <Header 
+            onAddTask={handleAddTask} 
+            className="border-b border-gray-200 bg-white"
+          />
+          
           {/* Content Area */}
           <div className="flex-1 overflow-y-auto">
             <div className="container mx-auto px-4 py-8">
@@ -103,7 +105,7 @@ const TaskPage = () => {
               </div>
             </div>
           </div>
-        </div>
+        </>
       </div>
       
       <CategoryModal
