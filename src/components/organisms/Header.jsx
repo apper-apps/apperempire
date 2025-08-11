@@ -1,12 +1,11 @@
-import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { taskService } from "@/services/api/taskService";
+import React, { useEffect, useState } from "react";
+import ApperIcon from "@/components/ApperIcon";
 import ProgressRing from "@/components/molecules/ProgressRing";
 import Button from "@/components/atoms/Button";
-import ApperIcon from "@/components/ApperIcon";
-import { taskService } from "@/services/api/taskService";
 import { cn } from "@/utils/cn";
-
-const Header = ({ onAddTask, className }) => {
+const Header = ({ onAddTask, onToggleSidebar, className }) => {
   const [stats, setStats] = useState({
     total: 0,
     completed: 0,
