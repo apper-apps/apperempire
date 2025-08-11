@@ -13,7 +13,7 @@ import categoriesData from "@/services/mockData/categories.json";
 const TaskPage = () => {
   const [refreshTrigger, setRefreshTrigger] = useState(0);
   const [showCategoryModal, setShowCategoryModal] = useState(false);
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(true);
   const taskFormRef = useRef(null);
 
   const handleTaskCreated = () => {
