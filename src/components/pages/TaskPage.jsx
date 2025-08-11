@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
-import Sidebar from "@/components/organisms/Sidebar";
 import ApperIcon from "@/components/ApperIcon";
 import Header from "@/components/organisms/Header";
 import CategoryModal from "@/components/organisms/CategoryModal";
@@ -11,9 +10,10 @@ import tasksData from "@/services/mockData/tasks.json";
 import categoriesData from "@/services/mockData/categories.json";
 
 const TaskPage = () => {
-  const [refreshTrigger, setRefreshTrigger] = useState(0);
+  const [showTaskForm, setShowTaskForm] = useState(false);
   const [showCategoryModal, setShowCategoryModal] = useState(false);
-  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [refreshTrigger, setRefreshTrigger] = useState(0);
+  const scrollRef = useRef(null);
   const taskFormRef = useRef(null);
 
   const handleTaskCreated = () => {
@@ -31,31 +31,19 @@ const TaskPage = () => {
         block: "start"
       });
     } catch (e) { 
-      throw e;
+      console.error('Error scrolling to task form:', e);
     }
   };
 
   return (
-    <div className="min-h-screen bg-gray-100">
-      <Header onAddTask={handleAddTask} />
-      
-<div className="flex h-screen bg-gray-50">
-        {/* Sidebar */}
-        <Sidebar 
-          isOpen={sidebarOpen} 
-          onClose={() => setSidebarOpen(false)}
-          onCategoryClick={() => setShowCategoryModal(true)}
+    <div className="flex h-screen bg-gray-50">
+      {/* Main Content */}
+      <div className="flex-1 flex flex-col">
+        {/* Header */}
+        <Header 
+          onAddTask={handleAddTask} 
+          className="border-b border-gray-200 bg-white"
         />
-
-        {/* Main Content */}
-        <div className="flex-1 flex flex-col overflow-hidden">
-          {/* Header */}
-          <Header 
-            onAddTask={handleAddTask} 
-            onToggleSidebar={() => setSidebarOpen(!sidebarOpen)}
-            className="border-b border-gray-200 bg-white"
-          />
-
           {/* Content Area */}
           <div className="flex-1 overflow-y-auto">
             <div className="container mx-auto px-4 py-8">
